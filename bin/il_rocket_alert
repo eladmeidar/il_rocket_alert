@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require_relative '../lib/il_rocket_alerts'
+
+puts "Rocket alert is running, checking every #{(ARGV[0] || 60).to_i} seconds"
+system("say 'Rocket alert is running, checking every #{(ARGV[0] || 60).to_i} seconds'")
+IlRocketAlerts.run!((ARGV[0] || 60).to_i)
